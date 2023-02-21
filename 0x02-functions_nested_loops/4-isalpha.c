@@ -3,7 +3,7 @@
 /**
  *  _isalpha - checks whether a character is upper case
  *
- *  @c - character to be checked if upper case or not
+ *  @c : character to be checked
  *
  *  Return: 0 or 1
  *
