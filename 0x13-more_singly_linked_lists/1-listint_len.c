@@ -1,8 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
  * listint_len -  returns the number of elements in a linked listint_t list
- * @h: linked list of type listint_t
+ * @h: A pointer to a node
  *
  * Return: number of nodes
  */
