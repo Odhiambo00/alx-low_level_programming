@@ -6,7 +6,7 @@
  *
  * Return: the data inside the elements hat were deleted or 0 if the list is empty
  */
-int pop_lisint(listint_t **head)
+int pop_listint(listint_t **head)
 {
 	listint_t *temp;
 	int num;
