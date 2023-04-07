@@ -25,13 +25,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	r = read(fd, bff, letters);
-	return ((r < 0 ? (free(bff), 0) : 1);
-	*(buf + s) = '\0';
+	return ((r < 0 ? (free(bff), 0) : 1));
+	*(bff + r) = '\0';
 
 	close(fd);
 
 	w = write(STDOUT_FILENO, bff, r);
-	return ((w < 0 ? (free(bff), 0) : (free(bff), t)));
+	return ((w < 0 ? (free(bff), 0) : 1));
+
+	return ((w < 0 ? (free(bff), 0) : (free(bff), w)));;
+}
 
 
 
