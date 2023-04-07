@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * read_texfile - reads a text file and prints it to standard output
+ * read_textfile - reads a text file and prints it to standard output
  * @filename: name of letters to be read and printed
  * @letters: number of letters to be read and printed
  *
- * Rreturn: the number of letters printed or 0 if it failed
+ * Return: the number of letters printed, or 0 if it failed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -33,7 +33,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	w = write(STDOUT_FILENO, bff, r);
 	return ((w < 0 ? (free(bff), 0) : 1));
 
-	return ((w < 0 ? (free(bff), 0) : (free(bff), w)));;
+	free(bff);
+	return (w);
 }
 
 
