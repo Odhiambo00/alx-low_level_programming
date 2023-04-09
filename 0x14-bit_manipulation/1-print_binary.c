@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	for (i = 63; i >= 0; i--)
 	{
 		present = n / (1UL << i);
-	if (present % 2 == 1)
+	if (present & 1)
 	{
 		_putchar('1');
 		count++;
