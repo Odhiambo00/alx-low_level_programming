@@ -1,5 +1,5 @@
-#ifndef _LISTS_
-#define _LISTS_
+#ifndef LIST_H
+#define LIST_H_
 
 #iclude <stdio.h>
 #include <stdlib.h>
@@ -31,4 +31,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 
-#endif
+#endif/*LIST_H*/
