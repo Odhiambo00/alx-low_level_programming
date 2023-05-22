@@ -1,4 +1,4 @@
 #!/bin/bash
-cp /bin/ls /tmp/.ls
-export PATH="/tmp:$PATH"
-export LD_PRELOAD="/tmp/iamawinner.so"
+wget -P /tmp https://github.com/Odhiambo00/alx-low_level_programming/
+tree/master/0x18-dynamic_libraries/iamawinner.so
+export LD_PRELOAD=/tmp/iamawinner.so
