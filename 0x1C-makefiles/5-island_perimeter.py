@@ -1,27 +1,26 @@
 #!/usr/bin/python3
+"""Defines an island perimeter measuring function."""
+
 
 def island_perimeter(grid):
-    """
-    Calculate the perimeter of the island described in the grid.
-
-    Parameters:
-        grid (List[List[int]]): A list of lists representing the grid.
-
+    """Return the perimiter of an island.
+    The grid represents water by 0 and land by 1.
+    Args:
+        grid (list): A list of list of integers representing an island.
     Returns:
-        int: The perimeter of the island.
+        The perimeter of the island defined in grid.
     """
-    perimeter = 0
-    for row in range(len(grid)):
-        for col in range(len(grid[0])):
-            if grid[row][col] == 1:
-                perimeter += 4  # Each land cell contributes 4 sides to the
-                # perimeter
-                # Check left neighbor
-                if col > 0 and grid[row][col - 1] == 1:
-                    perimeter -= 2  # Subtract 2 if the left neighbor is also
-                    # land
-                # Check top neighbor
-                if row > 0 and grid[row - 1][col] == 1:
-                    perimeter -= 2  # Subtract 2 if the top neighbor is also
-                    # land
-    return perimeter
+    width = len(grid[0])
+    height = len(grid)
+    edges = 0
+    size = 0
+
+    for i in range(height):
+        for j in range(width):
+            if grid[i][j] == 1:
+                size += 1
+                if (j > 0 and grid[i][j - 1] == 1):
+                    edges += 1
+                if (i > 0 and grid[i - 1][j] == 1):
+                    edges += 1
+    return size * 4 - edges * 2
